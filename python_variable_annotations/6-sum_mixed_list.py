@@ -4,10 +4,10 @@ Devolver la suma de una lista de
 flotantes
 """
 
-from typing import List
+from typing import List, Union
 
 
-def sum_mixed_list(mxd_lst: List[int]) -> float:
+def sum_mixed_list(mxd_lst: List[Union[int, float]]) -> float:
     """
     Resume una lista de números enteros y flotantes
     y devuelve su suma como flotante.
