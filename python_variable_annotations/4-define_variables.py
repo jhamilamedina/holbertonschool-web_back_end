@@ -3,7 +3,7 @@
 Definir variables
 """
 
-from typing import TypedDict
+import typing
 
 
 a: int = 1
