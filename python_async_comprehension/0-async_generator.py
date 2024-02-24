@@ -5,6 +5,7 @@ que se repetirá10 veces
 """
 
 import asyncio
+from typing import Generator
 import random
 
 
