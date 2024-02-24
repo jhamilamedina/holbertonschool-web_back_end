@@ -8,7 +8,7 @@ import asyncio
 import random
 
 
-async def async_generator():
+async def async_generator() -> Generator [float, None, None]:
     """
     Define una coroutina asincrona que se repita
     10 veces
