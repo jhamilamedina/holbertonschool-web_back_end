@@ -1,2 +1,4 @@
-// inserte un documento en la db school
-db.school.insertOne({"name":"Holberton school"})
+// inserte un documento en la school: db
+
+
+db.school.insertOne({"name":"Holberton school"}) //Para insertar un doc
