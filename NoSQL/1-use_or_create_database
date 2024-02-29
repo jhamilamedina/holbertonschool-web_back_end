@@ -1,0 +1,3 @@
+// Creará una BDs my_db pero no aparecerá hasta
+// que tenga datos
+use my_db
