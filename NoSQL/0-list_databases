@@ -1,9 +1,2 @@
-Current Mongosh Log ID: 65dfecdf645b36fead9962d1
-connecting to: mongodb:  mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.1.5
-Using MongoDB:          7.0.6
-Using Mongosh:          2.1.5
-admin                       40.00 KiB
-config                     108.00 KiB
-local                       72.00 KiB
-mongodbVSCodePlaygroundDB   40.00 KiB
-test> quit
+// Listar BDs en MongoDB
+show dbs
