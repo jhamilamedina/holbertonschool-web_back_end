@@ -1,4 +1,7 @@
 // inserte un documento en la school: db
 
 
-db.school.insertOne({"name":"Holberton school"}) //Para insertar un doc
+db.school.insert({"name":"Holberton school"}) //Para insertar un doc
+
+// DeprecationWarning: Collection.insert() está en desuso mejor 
+// utilice insertOne, insertMany o BulkWrite.
