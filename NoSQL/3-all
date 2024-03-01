@@ -1,0 +1,3 @@
+// enumere todos los documentos de la colección: school
+
+db.school.find()
