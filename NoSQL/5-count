@@ -1,0 +1,7 @@
+// Escribir un guión que muestre la cantidad de documentos 
+// en la colección de la school
+
+db.school.count({"name":"Holberton school"})
+// warning
+// Collection.count() está en desuso. 
+// Utilice countDocuments o estimatedDocumentCount.
