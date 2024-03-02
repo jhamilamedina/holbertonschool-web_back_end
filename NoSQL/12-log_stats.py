@@ -1,16 +1,12 @@
 #!/usr/bin/env python3
-"""
-Muestra las estadísticas sobre los registros de Nginx 
-almacenados en MongoDB
-"""
+"""Muestra las estadísticas de la base de datos logs"""
 
 from pymongo import MongoClient
 
 
 if __name__ == '__main__':
     client = MongoClient('mongodb://127.0.0.1:27017')
-    db = client['logs']
-    collection = db['nginx']
+    collection = client['logs']['nginx']
 
     total_documents = collection.count_documents({})
     total_status = collection.count_documents({"path": "/status"})
