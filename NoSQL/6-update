@@ -1,0 +1,5 @@
+// Actualizar solo el documento con nombre="Escuela Holberton"
+db.school.updateOne(
+    {"name":"Holberton school"}, // Filtro para seleccionar el documento
+    {$set:{"address":"972 Mission street"}} // Nuevo valor a agregar
+)
