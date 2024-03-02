@@ -1,0 +1,4 @@
+// Enumere todos los documentos con nombre="Holberton school" 
+// en la colección school
+
+db.school.find()
