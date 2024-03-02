@@ -1,5 +1,2 @@
 // Actualizar solo el documento con nombre="Escuela Holberton"
 db.school.update({"name":"Holberton school"}, {$set: {"address":"972 Mission street"}})
-// Warning
-// Collection.update() está en desuso. Utilice updateOne,
-// updateMany o BulkWrite.
