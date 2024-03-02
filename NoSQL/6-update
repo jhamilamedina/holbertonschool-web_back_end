@@ -1,2 +1,3 @@
-// Actualizar solo el documento con nombre="Escuela Holberton"
+// Actualizar solo el documento con name:school Holberton
+
 db.school.update({"name":"Holberton school"}, {$set: {"address":"972 Mission street"}})
