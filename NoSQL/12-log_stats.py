@@ -8,25 +8,19 @@ from pymongo import MongoClient
 
 
 # Conexión a la base de datos de MongoDB
-if __name__ == "__main__":
-    client = MongoClient('mongodb://localhost:27017')
-    db = client['logs']
-    collection = db['nginx']
+client = MongoClient('mongodb://localhost:27017/')
+db = client['logs']
+collection = db['nginx']
 
 # Estadísticas generales
 total_logs = collection.count_documents({})
+
+# Métodos
+methods = ["GET", "POST", "PUT", "PATCH", "DELETE"]
+method_counts = {method: collection.count_documents({"method": method}) for method in methods}
+
 # Ruta /status con método GET
 status_count = collection.count_documents({"method": "GET", "path": "/status"})
-
-methods = [
-        {"method": "GET"},
-        {"method": "POST"},
-        {"method": "PUT"},
-        {"method": "PATCH"},
-        {"method": "DELETE"},
-    ]
-
-method_counts = {method: collection.count_documents({"method": method}) for method in methods}
 
 # Presentación de los resultados
 print(f"first line: {total_logs} logs where {total_logs} is the number of documents in this collection")
