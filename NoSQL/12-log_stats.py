@@ -7,25 +7,25 @@ almacenados en MongoDB
 from pymongo import MongoClient
 
 
-# Conexión a la base de datos de MongoDB
-client = MongoClient('mongodb://localhost:27017/')
-db = client['logs']
-collection = db['nginx']
+if __name__ == '__main__':
+    client = MongoClient('mongodb://127.0.0.1:27017')
+    collection = client['logs']['nginx']
 
-# Estadísticas generales
-total_logs = collection.count_documents({})
+    total_documents = collection.count_documents({})
+    total_status = collection.count_documents({"path": "/status"})
 
-# Métodos
-methods = ["GET", "POST", "PUT", "PATCH", "DELETE"]
-method_counts = {method: collection.count_documents({"method": method}) for method in methods}
+    methods = [
+        {"method": "GET"},
+        {"method": "POST"},
+        {"method": "PUT"},
+        {"method": "PATCH"},
+        {"method": "DELETE"},
+    ]
 
-# Ruta /status con método GET
-status_count = collection.count_documents({"method": "GET", "path": "/status"})
+    totales = [collection.count_documents(method) for method in methods]
 
-# Presentación de los resultados
-print(f"first line: {total_logs} logs where {total_logs} is the number of documents in this collection")
-print("second line: Methods:")
-for method, count in method_counts.items():
-    print(f"\t{count} {method}")
-
-print(f"\t{status_count} documents with method=GET and path=/status")
+    print(f'{total_documents} logs')
+    print('Methods:')
+    for i, t in enumerate(totales):
+        print(f'\tmethod {methods[i].get("method")}: {t}')
+    print(f'{total_status} status check')
