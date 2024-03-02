@@ -1,5 +1,5 @@
 // Actualizar solo el documento con nombre="Escuela Holberton"
-db.school.updateOne(
-    {"name":"Holberton school"}, // Filtro para seleccionar el documento
-    {$set:{"address":"972 Mission street"}} // Nuevo valor a agregar
-)
+db.school.update({"name":"Holberton school"}, {$set: {"address":"972 Mission street"}})
+// Warning
+// Collection.update() está en desuso. Utilice updateOne,
+// updateMany o BulkWrite.
