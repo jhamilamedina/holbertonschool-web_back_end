@@ -1,3 +1,0 @@
-//Este script usa regex para buscar coincidencias.
-
-db.school.find({"name": {"$regex": "^Holberton"}})
