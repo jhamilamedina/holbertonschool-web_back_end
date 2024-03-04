@@ -9,21 +9,17 @@ if __name__ == '__main__':
     db = client['logs']
     collection = db['nginx']
 
-    total_documents = collection.count_documents({})
-    total_status = collection.count_documents({"path": "/status"})
+    try:
+        total_documents = collection.count_documents({})
+        total_status = collection.count_documents({"path": "/status"})
 
-    methods = [
-        {"method": "GET"},
-        {"method": "POST"},
-        {"method": "PUT"},
-        {"method": "PATCH"},
-        {"method": "DELETE"},
-    ]
+        methods = ["GET", "POST", "PUT", "PATCH", "DELETE"]
+        totales = [collection.count_documents({"method": method}) for method in methods]
 
-    totales = [collection.count_documents(method) for method in methods]
-
-    print(f'{total_documents} logs')
-    print('Methods:')
-    for i, t in enumerate(totales):
-        print(f'\tmethod {methods[i].get("method")}: {t}')
-    print(f'{total_status} status check')
+        print(f'{total_documents} logs')
+        print('Methods:')
+        for i, method in enumerate(methods):
+            print(f'\tmethod {method}: {totales[i]}')
+        print(f'{total_status} status check')
+    except Exception as e:
+        print(f'Error: {e}')
