@@ -1,41 +1,25 @@
 #!/usr/bin/env python3
-"""Nueva versión de estadística de ngnix"""
-
+"""Muestra las estadísticas de la base de datos logs"""
 
 from pymongo import MongoClient
 
 
 if __name__ == '__main__':
     client = MongoClient('mongodb://127.0.0.1:27017')
-    collection = client['logs']['nginx']
+    db = client['logs']
+    collection = db['nginx']
 
-    total_documents = collection.count_documents({})
-    total_status = collection.count_documents({"path": "/status"})
+    try:
+        total_documents = collection.count_documents({})
+        total_status = collection.count_documents({"path": "/status"})
 
-    methods = [
-        {"method": "GET"},
-        {"method": "POST"},
-        {"method": "PUT"},
-        {"method": "PATCH"},
-        {"method": "DELETE"},
-    ]
+        methods = ["GET", "POST", "PUT", "PATCH", "DELETE"]
+        totales = [collection.count_documents({"method": method}) for method in methods]
 
-    totales = [collection.count_documents(method) for method in methods]
-
-    print(f'{total_documents} logs')
-    print('Methods:')
-    for i, t in enumerate(totales):
-        print(f'\tmethod {methods[i].get("method")}: {t}')
-    print(f'{total_status} status check')
-
-    pipeline = [
-        {"$group": {"_id": "$ip", "count": {"$sum": 1}}},
-        {"$sort": {"count": -1}},
-        {"$limit": 10}
-    ]
-
-    ips = collection.aggregate(pipeline)
-
-    print('IPs:')
-    for ip in ips:
-        print(f"\t{ip.get('_id')}: {ip.get('count')}")
+        print(f'{total_documents} logs')
+        print('Methods:')
+        for i, method in enumerate(methods):
+            print(f'\tmethod {method}: {totales[i]}')
+        print(f'{total_status} status check')
+    except Exception as e:
+        print(f'Error: {e}')
