@@ -4,9 +4,6 @@ Función index_range que tome dos argumentos enteros, página y
 tamaño de página.
 """
 
-from typing import Tuple
-
-
 def index_range(page, page_size):
     """
     Funcion que toma 2 argumentos y devuelve
