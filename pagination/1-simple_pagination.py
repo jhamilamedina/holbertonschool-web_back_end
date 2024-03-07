@@ -40,4 +40,4 @@ class Server:
         if star_index >= len(self.dataset()) or end_index <= 0:
             return []
         else:
-            return self.dataset()[star_index:end_index]
+            return self.dataset()[star_index: end_index]
