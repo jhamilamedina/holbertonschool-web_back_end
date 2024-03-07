@@ -13,6 +13,12 @@ from typing import List
 index_range = __import__('0-simple_helper_function').index_range
 
 
+def entero_positivo(valor: int) -> None:
+    """Valida que sea un nro entero positivo"""
+    assert isinstance(page, int) and page > 0, """La pá >0"""
+    assert isinstance(page_size, int) and page_size > 0, """El size > 0"""
+
+
 class Server:
     """Server class to paginate a database of popular baby names.
     """
@@ -33,8 +39,10 @@ class Server:
         return self.__dataset
 
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
-        assert isinstance(page, int) and page > 0, "La pá > 0"
-        assert isinstance(page_size, int) and page_size > 0, "El size > 0"""
+
+        entero_positivo(page)
+        entero_positivo(page_size)
+
         start_index, end_index = index_range(page, page_size)
 
         return self.dataset()[start_index: end_index]
