@@ -10,19 +10,8 @@ import math
 from typing import List
 
 
-def index_range(page, page_size):
-    """
-    Funcion que toma 2 argumentos y devuelve
-    una Tuple
-    Args:
-        page (int): nro de pagina
-        page_size (int): tamaño de pagina
-    Return:
-        Tuple of size
-    """
-    start_index = (page - 1) * page_size
-    end_index = page * page_size
-    return (start_index, end_index)
+# Se importa el modulo 0-simple_helper_function.py 
+index_range = __import__('0-simple_helper_function').index_range
 
 
 class Server:
