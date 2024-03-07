@@ -15,8 +15,8 @@ index_range = __import__('0-simple_helper_function').index_range
 
 def entero_positivo(valor: int) -> None:
     """Valida que sea un nro entero positivo"""
-    assert isinstance(page, int) and page > 0, """La pá >0"""
-    assert isinstance(page_size, int) and page_size > 0, """El size > 0"""
+    assert isinstance(valor, int), AssertionError
+    assert valor > 0, AssertionError
 
 
 class Server:
