@@ -24,6 +24,7 @@ def index_range(page, page_size):
     end_index = page * page_size
     return (start_index, end_index)
 
+
 class Server:
     """Server class to paginate a database of popular baby names.
     """
@@ -44,8 +45,8 @@ class Server:
         return self.__dataset
 
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
-        assert isinstance(page, int) and page > 0, "La página debe ser un entero mayor que 0"
-        assert isinstance(page_size, int) and page_size > 0, "El size debe ser > 0"""
+        assert isinstance(page, int) and page > 0, "La pá > 0"
+        assert isinstance(page_size, int) and page_size > 0, "El size > 0"""
         start_index, end_index = index_range(page, page_size)
 
         if start_index >= len(self.dataset()) or end_index <= 0:
