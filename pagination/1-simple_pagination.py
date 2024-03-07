@@ -9,8 +9,7 @@ import csv
 import math
 from typing import List
 
-
-# Se importa el modulo 0-simple_helper_function.py 
+# Se importa el modulo 0-simple_helper_function.py
 index_range = __import__('0-simple_helper_function').index_range
 
 
