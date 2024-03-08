@@ -38,7 +38,7 @@ class Server:
         Args:
             page(int): Nro de paginas
             page_size(int): cantidad de items a devolver
-        
+
         Return:
             list: [:] Un slice con la items solicitados
         """
