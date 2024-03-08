@@ -33,6 +33,15 @@ class Server:
         return self.__dataset
 
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
+        """
+        Entrega un un slice con la paginación solicitad
+        Args:
+            page(int): Nro de paginas
+            page_size(int): cantidad de items a devolver
+        
+        Return:
+            list: [:] Un slice con la items solicitados
+        """
         assert isinstance(page, int) and page > 0, """La pag > 0"""
         assert isinstance(page_size, int) and page_size > 0, """El size > 0"""
 
