@@ -1,6 +1,5 @@
 // Definimos una clase llamada ClassRoom
-// Exportamos la clase para que esté disponible fuera de el archivo
-export default class ClassRoom {
+class ClassRoom {
     // Constructor: Llama automaticamente a la clase
     // Definimos el atributo maxStudentsSize
     constructor(maxStudentsSize) {
@@ -9,3 +8,6 @@ export default class ClassRoom {
         this._maxStudentsSize = maxStudentsSize;
     }
 }
+
+// Exportamos la clase para que esté disponible fuera de el archivo
+export default ClassRoom;

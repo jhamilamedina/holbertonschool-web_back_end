@@ -5,8 +5,9 @@
   "description": "Jest course",
   "main": "0-main.js",
   "scripts": {
+    "my-script": "node 0-main.js",
     "test": "jest",
-    "start": "babel-node ./prueba.js"
+    "start": "babel-node ./0-main.js"
   },
   "keywords": [
     "jest",
