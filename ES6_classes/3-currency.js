@@ -28,6 +28,6 @@ export default class Currency {
 
   // Método que muestra los atributos en formato específico
   displayFullCurrency() {
-    return `(${this._name}) ${this._code}`;
+    return `${this._name} (${this._code})`;
   }
 }
