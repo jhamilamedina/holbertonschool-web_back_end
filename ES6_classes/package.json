@@ -7,8 +7,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "lint": "eslint . --fix",
-    "my-script": "node 0-main.js",
+    "lint": "eslint",
     "test": "jest",
     "start": "babel-node ./0-main.js"
   },
