@@ -28,7 +28,7 @@ export default class Pricing {
 
   // Implemente un método llamado displayFullPrice
   displayFullPrice() {
-    return `${this._amount} ${this._currency.name}_${this._currency.code}`;
+    return `${this._amount} ${this._currency.name} (${this._currency.code})`;
   }
 
   // Implemente un método estático llamado convertPrice.
