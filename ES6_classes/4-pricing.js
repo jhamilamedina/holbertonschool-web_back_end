@@ -23,7 +23,7 @@ export default class Pricing {
 
   // Setter  para el atributo currency
   set currency(NewCurrency) {
-    this._amount = NewCurrency;
+    this._currency = NewCurrency;
   }
 
   // Implemente un método llamado displayFullPrice
