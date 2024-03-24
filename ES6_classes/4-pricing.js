@@ -31,7 +31,7 @@ export default class Pricing {
   }
 
   // Implemente un método estático llamado convertPrice.
-  static convertPrice(currency, conversionRate) {
-    return currency * conversionRate;
+  static convertPrice(amount, conversionRate) {
+    return amount * conversionRate;
   }
 }
