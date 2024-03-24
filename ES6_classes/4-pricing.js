@@ -1,4 +1,5 @@
-// Implemente una clase llamada Precios:
+// Implemente una clase llamada Precios
+
 export default class Pricing {
   constructor(amount, currency) {
     this._amount = amount;
