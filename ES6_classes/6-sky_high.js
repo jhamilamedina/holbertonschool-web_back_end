@@ -6,7 +6,7 @@ import Building from './5-building.js';
 // Implemente la clase SkyHighBuilding con extiencion Building:
 export default class SkyHighBuilding extends Building {
   // Atributos del constructor:
-  constructor(sqft, floors) {
+  constructor(sqft = 0, floors = 0) {
     // Llame al constructor de la clase principal usando super
     super(sqft);
     // floors (Number)
