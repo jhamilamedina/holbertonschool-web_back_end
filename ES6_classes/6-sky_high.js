@@ -1,9 +1,7 @@
-// Clase SkyHighBuilding
+// Class SkyHighBuilding
 
-// Importa la clase Building del modulo 5-building.js
-import Building from './5-building.js';
+import Building from './5-building';
 
-// Implemente la clase SkyHighBuilding con extiencion Building:
 export default class SkyHighBuilding extends Building {
   // Atributos del constructor:
   constructor(sqft = 0, floors = 0) {
