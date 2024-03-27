@@ -1,5 +1,5 @@
-import listOfStudents from './9-hoisting.js';
+import listOfStudents, { StudentHolberton, HolbertonClass } from './9-hoisting.js';
 
-test('listOfStudents has the correct length', () => {
+test('initialization works correctly', () => {
   expect(listOfStudents.length).toBe(5);
 });

@@ -33,8 +33,8 @@ export class StudentHolberton {
   }
 }
 
-const class2020 = new StudentHolberton(2020, 'New York');
-const class2019 = new StudentHolberton(2019, 'Londres');
+const class2020 = new HolbertonClass(2020, 'San Francisco');
+const class2019 = new HolbertonClass(2019, 'San Francisco');
 const student1 = new StudentHolberton('Guillaume', 'Salva', class2020);
 const student2 = new StudentHolberton('John', 'Doe', class2020);
 const student3 = new StudentHolberton('Albert', 'Clinton', class2019);
