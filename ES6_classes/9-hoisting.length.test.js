@@ -1,5 +1,5 @@
 import listOfStudents from './9-hoisting.js';
 
-test('initialization works correctly', () => {
-  expect(listOfStudents).toBe(5);
+test('listOfStudents has the correct length', () => {
+  expect(listOfStudents.length).toBe(5);
 });
