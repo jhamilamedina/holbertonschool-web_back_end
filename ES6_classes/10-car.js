@@ -9,7 +9,8 @@ export default class Car {
 
   // Método cloneCar
   cloneCar() {
-    // Devuelve un nuevo objeto de la clase con los mismos atributos.
-    return new Car(this._brand, this._motor, this._color);
+    const newCar = new Car();
+    Object.setPrototypeOf(newCar, Object.getPrototypeOf(this));
+    return newCar;
   }
 }
