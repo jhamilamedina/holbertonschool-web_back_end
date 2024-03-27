@@ -1,7 +1,6 @@
 import ClassRoom from './0-classroom.js';
 
-export default function inicializarRooms() {
-  // Creamos una matriz vacía para almacenar los objetos ClassRoom
+export default function initializeRooms() {
   const rooms = [];
 
   // Creamos tres instancias de ClassRoom con los tamaños dados y las agregamos a la matriz
