@@ -23,7 +23,7 @@ getFullResponseFromAPI(true)
     console.error('The fake API is not working currently:', error.message);
   });
 
-  getFullResponseFromAPI(false)
+getFullResponseFromAPI(false)
   .then((response) => {
     console.log(response);
   })
