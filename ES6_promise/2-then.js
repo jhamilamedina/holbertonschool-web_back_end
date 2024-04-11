@@ -1,4 +1,4 @@
-function handleResponseFromAPI(promise) {
+export default function handleResponseFromAPI(promise) {
   // Agregamos un manejador utilizando el método .then()
   promise.then((response) => {
     // Si la promesa se resuelve correctamente, mostramos un mensaje en la consola
