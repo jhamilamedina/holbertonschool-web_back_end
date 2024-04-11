@@ -1,6 +1,6 @@
-// Esta funcion devuelve una promesa(promisse)
+// Esta funcion devuelve una promesa
 
-function getResponseFromAPI() {
+export default function getResponseFromAPI() {
   // se crea una nueva promesa
   return new Promise((resolve, reject) => {
     // se simula una llamada al API
@@ -10,7 +10,7 @@ function getResponseFromAPI() {
       // Se obtiene la respuesta del API en un json
 
       if (exito) {
-        resolve('¡Respuesta de la API recibida!');
+        resolve('');
       } else {
         reject(new Error('Error al obtener los datos'));
       }
@@ -21,7 +21,7 @@ function getResponseFromAPI() {
 // Manejamos la promesa con .then para el exito
 getResponseFromAPI()
   .then((data) => {
-    console.log('Datos obtenidos', data);
+    console.log(data);
   })
 
   // Utilizamos el catch para el error
