@@ -1,11 +1,7 @@
 // Funcion rechaza una argumento nombre de archivo(string)
 
-export default function uploadPhoto(filename) {
+export default function uploadPhoto(fileName) {
   return new Promise((resolve, reject) => {
-    if (typeof filename === 'string') {
-      reject(new Error('$fileName cannot be processed'));
-    } else {
-      resolve('');
-    }
+    reject(new Error(`${fileName} cannot be processed`));
   });
 }
