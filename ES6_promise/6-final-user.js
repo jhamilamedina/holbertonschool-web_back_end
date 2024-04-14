@@ -13,8 +13,7 @@ export default function handleProfileSignup(firstName, lastName, fileName) {
   // Esperar a que todas las promesas se resuelvan o se rechacen
   return Promise.allSettled([signUpPromise, uploadPhotoPromise]).then((results) =>
     // Mapear los resultados a un array con la estructura requerida
-    results.map((result) => 
-    ({
+    results.map((result) => ({
       status: result.status, // status de la promesa (fulfilled o rejected)
       value: result.status === 'fulfilled' ? result.value : result.reason, // valor o error devuelto por la promesa
     })));
