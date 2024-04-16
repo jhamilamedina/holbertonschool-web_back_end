@@ -1,14 +1,14 @@
 // Importar las funciones necesarias
-import signUpUser from './4-user-promise';
+import signUser from './4-user-promise';
 import uploadPhoto from './5-photo-reject';
 
-// Definir y exportar la función handleProfileSignup
 export default function handleProfileSignup(firstName, lastName, fileName) {
   return Promise.allSettled([
-    signUpUser(firstName, lastName),
+    signUser(firstName, lastName),
     uploadPhoto(fileName),
-  ]).then((results) => results.map((result) => ({
-    status: result.status,
-    value: result.status === 'fulfilled' ? result.value : result.reason,
-  })));
+  ]).then((results) => results.map((result) => (
+    result.status === 'fulfilled'
+      ? { status: result.status, value: result.value }
+      : { status: result.status, value: `Error: ${result.reason.message}` }
+  )));
 }
