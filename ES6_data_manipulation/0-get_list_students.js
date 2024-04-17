@@ -2,8 +2,8 @@
 export default function getListStudents() {
   // Creamos y retornamos una matriz
   return [
-    { id: 1, firsName: 'Guillaume', location: 'San Francisco' },
-    { id: 2, firsName: 'James', location: 'Columbia' },
-    { id: 3, firsName: 'Serena', location: 'San Francisco' },
+    { id: 1, firstName: 'Guillaume', location: 'San Francisco' },
+    { id: 2, firstName: 'James', location: 'Columbia' },
+    { id: 5, firstName: 'Serena', location: 'San Francisco' },
   ];
 }
