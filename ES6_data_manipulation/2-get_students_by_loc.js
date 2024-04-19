@@ -1,15 +1,10 @@
-// Devuelve una matriz de objetos ubicados en una ciudad específica.
-export default function getListStudents() {
-  return [
-    { id: 1, firstName: 'Guillaume', location: 'San Francisco' },
-    { id: 5, firstName: 'Serena', location: 'San Francisco' },
-  ];
-}
-
+// Función para obtener la lista de estudiantes (simulada)
 // Función para obtener estudiantes por ubicación
-function getStudentsByLocation(students, city) {
-  // Usar la función filter para filtrar estudiantes por ciudad
-  const studentsInCity = students.filter(student => student.city === city);
-  return studentsInCity;
-}
 
+export default function getStudentsByLocation(listStudents, location) {
+  let tempArray = '';
+  if (Array.isArray(listStudents) && typeof location === 'string') {
+    tempArray = listStudents.filter((student) => student.location === location);
+  }
+  return tempArray;
+}
