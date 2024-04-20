@@ -6,15 +6,31 @@ export default function updateUniqueItems(inputMap) {
     throw new Error('Cannot process');
   }
 
-  const updatedMap = new Map();
+  // // bucle forEach
+  // inputMap.forEach((value, key) => {
+  //   if(value === 1) {
+  //     inputMap.set(key, 100)
+  //   }
+  // })
+  // return inputMap;
 
-  inputMap.forEach((cantidad, producto) => {
-    if (cantidad === 1) {
-      updatedMap.set(producto, 100);
-    } else {
-      updatedMap.set(producto, cantidad);
+  // bucle for.. of para iterar sobre el map
+  for (const [key, value] of inputMap) {
+    if (value === 1) {
+      inputMap.set(key, 100);
     }
-  });
+  }
+  // return inputMap;
 
-  return updatedMap;
+  // const updatedMap = new Map();
+
+  // inputMap.forEach((cantidad, producto) => {
+  //   if (cantidad === 1) {
+  //     updatedMap.set(producto, 100);
+  //   } else {
+  //     updatedMap.set(producto, cantidad);
+  //   }
+  // });
+
+  // return updatedMap;
 }
