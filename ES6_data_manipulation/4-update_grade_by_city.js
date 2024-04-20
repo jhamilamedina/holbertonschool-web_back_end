@@ -1,4 +1,4 @@
-/** Cree una funcion que devuelva una serie de estudiantes para una 
+/** Cree una funcion que devuelva una serie de estudiantes para una
 ciudad específica con su nueva calificación */
 
 export default function updateStudentGradeByCity(listStudents, city, newGrades) {
