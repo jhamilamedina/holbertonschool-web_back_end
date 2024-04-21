@@ -21,7 +21,7 @@ export default function createInt8TypedArray(length, position, value) {
   const view = new DataView(buffer);
 
   // Asignamos el valor value en la posición position dentro del setInt8
-  view.setInt8[position] = value;
+  view.setInt8(position, value);
 
   return view;
 }
