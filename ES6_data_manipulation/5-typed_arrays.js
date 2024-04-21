@@ -16,12 +16,12 @@ export default function createInt8TypedArray(length, position, value) {
 
   const buffer = new ArrayBuffer(length); // Creamos un nuevo ArrayBuffer
 
-  // Creamos una vista Int8Array del ArrayBuffer para poder acceder y
-  // modificar los datos en formato Int8
-  const int8View = new Int8Array(buffer);
+  // Creamos una vista DataView del ArrayBuffer para poder acceder y
+  // modificar los datos en formato setInt8
+  const view = new DataView(buffer);
 
-  // Asignamos el valor value en la posición position dentro del Int8Array
-  int8View[position] = value;
+  // Asignamos el valor value en la posición position dentro del setInt8
+  view.setInt8[position] = value;
 
-  return buffer;
+  return view;
 }
